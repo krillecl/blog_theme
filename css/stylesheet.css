@@ -1,0 +1,388 @@
+/****       Variables        ****/
+
+:root {
+    --grey: #DFDFDF;
+    --hover: #243E36;
+    --black: #353B3C;
+}
+
+/****       General Styles        ****/
+ 
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.read-more a {
+    width: 100%;
+    padding: 1.25rem;
+    margin-top: 2rem;
+    border: 2px dotted var(--grey);
+    text-align: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.read-more a:hover {
+    border: 2px dotted rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.active {
+    display: flex!important;
+}
+/****       Flex styles        ****/
+
+.flex {
+    display: flex;
+}
+
+/****       Headline Styles        ****/
+
+.h1 {
+    font-size: 1.8rem;
+}
+
+.h2 {
+    font-size: 1.5rem;
+}
+
+.h3 {
+    font-size: 1.3rem;
+}
+
+/****       List Styles        ****/
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list__item {
+    width: calc((100% / 3) - 1.5rem);
+    margin-left: 2.25rem;
+    margin-top: 2.25rem;
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.list__item:nth-child(1),
+.list__item:nth-child(2),
+.list__item:nth-child(3) {
+    margin-top: 0rem;
+}
+
+.list__item:nth-child(3n+1) {
+    margin-left: 0rem;
+}
+
+.list__item__media {
+    height: 350px;
+    overflow: hidden;
+}
+
+.list__item__media img {
+    width: 100%;
+    height: 350px;
+}
+
+.list__item__description {
+
+}
+
+.item__headline {
+    font-weight: 600;
+}
+
+.item__headline a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.item__headline a:hover {
+    text-decoration: underline;
+}
+
+.item__category {   
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.item__category__link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--black);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.item__category__link:hover {
+    background-color: white;
+    color:rgba(0, 0, 0, 1);
+}
+
+.item__timestamp {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #6e6e73;
+}
+
+/****       Header Styles        ****/
+
+.header {
+    padding: 0 10%;
+    background-color: #FFF;
+}
+
+/****       Topbar Styles        ****/
+
+.topbar {
+   
+}
+
+.topbar__brand {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar__brand__logo {
+    height: calc(70px - 1rem);
+}
+
+.topbar__brand__name {
+    margin-left: 0.75rem;
+}
+
+.topbar__brand__name a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4rem;
+}
+
+/****       Nav Styles        ****/
+
+.nav {
+    margin-top: 5px;
+    margin-left: 1.75rem;
+    align-items: center;
+}
+
+.nav__item {
+    margin: 0px 1rem;
+}
+
+.nav__item:nth-child(1) {
+    margin-left: 0;
+}
+
+.nav a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav__toggle {
+    display: flex;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+
+.nav__toggle i {
+    font-size: 1.8rem;
+}
+
+.search-field {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.search-field i {
+    margin-left: 0.5rem;
+}
+
+/****       Section Styles        ****/
+
+.section-headline {
+    padding: 1.5rem 10%;
+    font-size: 1.3rem;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.section-headline h1 {
+    position: relative;
+    z-index: 10;
+}
+
+.section-content {
+    padding: 0 10%;
+}
+
+.sticky-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(245,245,245,0.7);
+    z-index: 9;
+}
+
+/****       Main Styles        ****/
+
+.main {
+    flex: 1;
+}
+
+/****       Footer Styles        ****/
+.footer {
+    margin-top: 2rem;
+    padding: 3rem 10%;
+    background-color: var(--black);
+    color: #FFF;
+}
+
+.footer__copyright {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer__link {
+    color: inherit;
+}
+
+.footer__copyright .footer__link {
+    letter-spacing: 1px;
+}
+
+/****       Media Queries        ****/
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 851px) and (max-width: 1200px) {
+
+    .list__item {
+        width: calc((100% / 2) - 1.15rem);
+        margin-left: 2.25rem;
+    }
+
+    .list__item:nth-child(3n+1) {
+        margin-left: 2.25rem;
+    }
+    
+
+    .list__item:nth-child(2n+1) {
+        margin-left: 0rem;
+    }
+
+    .list__item:nth-child(3) {
+        margin-top: 2.25rem;
+    }
+       
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .header {
+        position: relative;
+        z-index: 100;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav__toggle {
+        display: flex;
+    }
+
+    .topbar__brand {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-field {
+        margin-left: 0;
+    }
+
+    .nav {
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #f2f2f2;
+        margin-left: 0;
+        margin-top: 0;
+        flex-direction: column;
+        z-index: 2;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    
+    .nav__item {
+        width: 100%;
+        height: 80px;
+        display: flex!important;
+        padding: 2rem 10%;
+        align-items: center;
+        font-size: 1.1rem;
+        margin: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.2)
+    }
+
+    .nav__item:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    .list__item {
+        width: calc((100% / 1));
+    } 
+
+    .list__item:nth-child(1n+1) {
+        margin-left: 0rem;
+    }
+
+    .list__item:nth-child(2),
+    .list__item:nth-child(3) {
+        margin-top: 2.25rem;
+    }
+
+    .list__item__media,
+    .list__item__media img {
+        height: auto;
+    }
+
+    .topbar__brand__name {
+        margin-left: 0rem;
+        display: none;
+    }
+       
+}
